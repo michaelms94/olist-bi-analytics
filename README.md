@@ -21,5 +21,5 @@ data/ → arquivos de dados
 sql/ → consultas SQL  
 powerbi/ → arquivo do dashboard  
 docs/ → documentos das entregas  
-images/ → imagens e prints do projeto
+images/ → imagens e prints do projeto  
 icons/ → icones do projeto
