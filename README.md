@@ -22,3 +22,4 @@ sql/ → consultas SQL
 powerbi/ → arquivo do dashboard  
 docs/ → documentos das entregas  
 images/ → imagens e prints do projeto
+icons/ → icones do projeto
