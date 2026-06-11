@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/Power%20BI-Business%20Intelligence-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
   <img src="https://img.shields.io/badge/DAX-Data%20Analysis%20Expressions-0F6CBD?style=for-the-badge">
   <img src="https://img.shields.io/badge/Power%20Query-ETL-217346?style=for-the-badge">
-  <img src="https://img.shields.io/badge/GitHub-Version%20Control-181717?style=for-the-badge&logo=github">
 </p>
 
 <p align="center">
@@ -84,7 +83,10 @@ O dataset contém informações sobre:
 | Git         | Controle de versão                       |
 | GitHub      | Hospedagem e documentação                |
 | Excel       | Validação e exploração inicial dos dados |
-
+| Photohop    | Tratamento de imagens utilizadas na documentação e apresentação do projeto |
+| Illustrator | Criação e personalização de ícones e elementos visuais do dashboard |
+| Claude      |Apoio na documentação, revisão de conteúdo e refinamento de descrições funcionais |
+            
 ---
 
 # 💡 Diferencial do Projeto
@@ -158,7 +160,7 @@ olist-bi-analytics
 ### KPIs
 
 * 💰 Total Sales
-* 📦 Delivered Orders
+* 🛒 Delivered Orders
 * 💵 Average Order Value
 * 🏆 Top Category
 
@@ -188,7 +190,7 @@ olist-bi-analytics
 
 * 👥 Total Customers
 * 💰 Revenue per Customer
-* 🌎 Top Customer State
+* 📌 Top Customer State
 * 🏙️ Top Customer City
 
 ### Análises
@@ -217,7 +219,7 @@ olist-bi-analytics
 ### KPIs
 
 * 🏪 Total Sellers
-* ⭐ Total Reviews
+* 💬 Total Reviews
 * ⭐ Average Review Score
 * 📍 Top Seller State
 
@@ -278,6 +280,13 @@ A modelagem foi construída utilizando conceitos de modelagem dimensional para p
 
 ---
 
+# 🎛️ Painel de Filtros
+
+![Filters](images/prints_git/filters.PNG)
+
+Foi desenvolvido um painel de filtros oculto para permitir análises dinâmicas por período e localização geográfica, melhorando a experiência do usuário e reduzindo a poluição visual do dashboard.
+
+
 # 🏗️ Modelo Entidade-Relacionamento (MER)
 
 ![MER](images/prints_git/MER.png)
@@ -318,14 +327,24 @@ O MER foi desenvolvido para documentar a estrutura de dados utilizada no projeto
 
 # 📊 Principais Medidas DAX
 
-## Total Orders
+As medidas DAX foram utilizadas para criar KPIs, regras de negócio e análises dinâmicas no dashboard. Abaixo estão algumas das principais medidas desenvolvidas durante o projeto.
+
+---
+
+## 🛒 Total Orders
+
+Conta a quantidade de pedidos únicos realizados no período analisado.
 
 ```DAX
 Total Orders =
 DISTINCTCOUNT(orders[order_id])
 ```
 
-## Total Revenue
+---
+
+## 💰 Total Revenue
+
+Calcula a receita total considerando o valor dos produtos e do frete, filtrando apenas pedidos entregues.
 
 ```DAX
 Total Revenue =
@@ -339,7 +358,11 @@ CALCULATE(
 )
 ```
 
-## Average Order Value
+---
+
+## 💵 Average Order Value
+
+Calcula o valor médio por pedido realizado.
 
 ```DAX
 Average Order Value =
@@ -349,7 +372,11 @@ DIVIDE(
 )
 ```
 
-## Total Customers
+---
+
+## 👥 Total Customers
+
+Conta a quantidade de clientes únicos presentes na base de dados.
 
 ```DAX
 Total Customers =
@@ -358,7 +385,11 @@ DISTINCTCOUNT(
 )
 ```
 
-## Revenue per Customer
+---
+
+## 💰 Revenue per Customer
+
+Calcula a receita média gerada por cliente.
 
 ```DAX
 Revenue per Customer =
@@ -368,7 +399,28 @@ DIVIDE(
 )
 ```
 
-## Total Sellers
+---
+
+## 📈 Cumulative Customers
+
+Calcula o crescimento acumulado da base de clientes ao longo do tempo.
+
+```DAX
+Cumulative Customers =
+CALCULATE(
+    [Total Customers],
+    FILTER(
+        ALLSELECTED(Calendario[Date]),
+        Calendario[Date] <= MAX(Calendario[Date])
+    )
+)
+```
+
+---
+
+## 🏪 Total Sellers
+
+Conta a quantidade total de vendedores cadastrados no marketplace.
 
 ```DAX
 Total Sellers =
@@ -377,13 +429,34 @@ DISTINCTCOUNT(
 )
 ```
 
-## Average Review Score
+---
+
+## ⭐ Average Review Score
+
+Calcula a média das avaliações registradas pelos clientes.
 
 ```DAX
 Average Review Score =
 AVERAGE(
     reviews[review_score]
 )
+```
+
+---
+
+### 🎯 O que essas medidas demonstram
+
+Durante o desenvolvimento do projeto foram aplicados conceitos de:
+
+- Contexto de filtro com `CALCULATE`
+- Iteração de linhas com `SUMX`
+- Divisão segura utilizando `DIVIDE`
+- Inteligência temporal com tabela calendário
+- Crescimento acumulado de indicadores
+- Construção de KPIs executivos
+- Modelagem analítica para Business Intelligence
+
+Essas medidas serviram como base para os dashboards de Overview, Products, Customers e Marketplace.
 ```
 
 ---
