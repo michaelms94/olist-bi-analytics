@@ -123,7 +123,7 @@ olist-bi-analytics
 
 ## 📊 Overview
 
-![Overview](images/prints_git/overview.png)
+![Overview](images/prints_git/overview.PNG) 
 
 ### KPIs
 
