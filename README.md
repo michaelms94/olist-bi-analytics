@@ -153,7 +153,7 @@ olist-bi-analytics
 
 ## 📦 Products
 
-![Products](images/02-products.png)
+![Products](images/prints_git/products.PNG)
 
 ### KPIs
 
@@ -182,7 +182,7 @@ olist-bi-analytics
 
 ## 👥 Customers
 
-![Customers](images/03-customers.png)
+![Customers](images/prints_git/customers.PNG)
 
 ### KPIs
 
@@ -212,7 +212,7 @@ olist-bi-analytics
 
 ## 🏪 Marketplace
 
-![Marketplace](images/04-marketplace.png)
+![Marketplace](images/prints_git/marketplace.PNG)
 
 ### KPIs
 
@@ -244,7 +244,7 @@ olist-bi-analytics
 
 ## 📘 Info
 
-![Info](images/05-info.png)
+![Info](images/prints_git/info.PNG)
 
 Página criada para documentar o projeto e facilitar a navegação do usuário.
 
@@ -263,7 +263,7 @@ Contém:
 
 ## Power BI Data Model
 
-![Model](images/07-data-model.png)
+![Model](images/prints_git/modelagem.PNG)
 
 A modelagem foi construída utilizando conceitos de modelagem dimensional para permitir análises integradas entre:
 
@@ -280,7 +280,7 @@ A modelagem foi construída utilizando conceitos de modelagem dimensional para p
 
 # 🏗️ Modelo Entidade-Relacionamento (MER)
 
-![MER](images/06-mer.png)
+![MER](images/prints_git/MER.png)
 
 O MER foi desenvolvido para documentar a estrutura de dados utilizada no projeto.
 
