@@ -83,7 +83,7 @@ O dataset contém informações sobre:
 | Git         | Controle de versão                       |
 | GitHub      | Hospedagem e documentação                |
 | Excel       | Validação e exploração inicial dos dados |
-| Photohop    | Tratamento de imagens utilizadas na documentação e apresentação do projeto |
+| Photoshop    | Tratamento de imagens utilizadas na documentação e apresentação do projeto |
 | Illustrator | Criação e personalização de ícones e elementos visuais do dashboard |
 | Claude      |Apoio na documentação, revisão de conteúdo e refinamento de descrições funcionais |
             
@@ -457,7 +457,6 @@ Durante o desenvolvimento do projeto foram aplicados conceitos de:
 - Modelagem analítica para Business Intelligence
 
 Essas medidas serviram como base para os dashboards de Overview, Products, Customers e Marketplace.
-```
 
 ---
 
